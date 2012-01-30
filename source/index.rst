@@ -11,7 +11,10 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
+   about
    plugin
+   setup
+   credit
 
 Indices and tables
 ==================
