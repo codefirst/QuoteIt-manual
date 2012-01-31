@@ -51,7 +51,38 @@ QuoteIt を利用するためには、以下のソフトウェアが必要です
 インハウスにデプロイした QuoteIt へのプラグインの追加は CUI から行います。
 ここでは例として debeso_ を引用するプラグインを作成します。
 
-**T.B.D**
+QuoteIt にはローカルのプラグインを追加する機構がないため、
+コンソールを利用して、プラグインを追加します。
+
+::
+
+    $ bundle exec padrino console
+
+以下のコードを実行します。
+
+::
+
+    Html.create(:name => 'debeso', :regexp => 'http://localhost/debeso/codes/edit/(\d+)', :clip => 'http://localhost/debeso/api/v1/snippets/$1.json', :url => 'http://localhost/debeso/', :transform => 'json["content"]')
+
+Heroku QuoteIt へのリレー
+--------------------------------------------------
+インハウス QuoteIt で処理されなかった URL を Heroku QuoteIt_ へ
+移譲することもできます。
+
+::
+
+    $ bundle exec padrino console
+
+以下のコードを実行します。
+
+::
+
+    Html.create(:name => 'QuoteIt', :regexp => '(.+)', :clip => 'http://quoteit.heroku.com/clip.html?u=$$1', :url => 'http://quoteit.heroku.com', :transform => 'content')
+
+.. note::
+
+   QuoteIt は、プラグインが登録された順に処理をしていくため、
+   QuoteIt プラグインは必ず最後に登録して下さい。
 
 .. _QuoteIt: http://quoteit.heroku.com/
 .. _debeso: http://www.codefirst.org/debeso/
