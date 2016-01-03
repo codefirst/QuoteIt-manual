@@ -17,5 +17,5 @@ Heroku にデプロイされているサービスを使う
   また、インハウス QuoteIt のプラグインとして Heroku QuoteIt を追加することで、リレーを実現することもできます。インハウスデプロイの方法は、 :doc:`setup`  で詳しく説明します。
 
 
-.. _QuoteIt: http://www.codefirst.org/quoteit/
+.. _QuoteIt: https://www.codefirst.org/quoteit/
 

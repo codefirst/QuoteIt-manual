@@ -86,4 +86,4 @@ DB に登録します。
    QuoteIt プラグインは必ず最後に登録して下さい。
 
 .. _QuoteIt: https://quoteit.herokuapp.com/
-.. _debeso: http://www.codefirst.org/debeso/
+.. _debeso: https://www.codefirst.org/debeso/
